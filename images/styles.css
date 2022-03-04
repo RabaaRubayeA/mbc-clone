@@ -1,0 +1,334 @@
+::before, ::after,*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+    font-family: 'Cairo', sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+}
+/* .nav-container{ */
+    /* position: fixed; */
+    /* top: 0; */
+    /* width: 100%; */
+    /* background: white;
+    display: flex; */
+    /* flex-direction: row;
+    justify-content: center;
+    align-items: center; */
+/* } */
+
+nav{
+    position:fixed;
+    background: white;
+    width:100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.5rem;
+    padding: 0 1rem;
+    /* overflow: hidden;   */
+
+    
+}
+.mbc-logo-link{
+    position: absolute;
+    right:50% ;
+    transform: translateX(50%);
+}
+.mbc-logo{
+    width: 4.5rem;
+}
+
+
+.menu.active{
+    position: absolute; /*use this line to make the menue appear*/
+    right: 0px;
+    top: 0px;
+    width:100vw;
+    height:100vh;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    /* z-index: -62;use this line to make the menue disappear */
+    }
+    .close-menu{
+        display: none;
+    }
+    .menu.active .close-menu{
+        display: block;
+        margin: 1rem;
+    }
+    
+/* .menu.active{
+    display: flex;
+} */
+.menu.active .menu-item .dash{
+    margin-right: .5rem;
+    margin-left: 1rem;
+    color: #1a1a1a;
+    /* opacity: .4; */
+
+}
+.menu-item{
+    display: none;
+}
+
+/* only when the menue is in active state display the menu-item */
+.menu.active .menu-item{
+    display: flex;
+    text-decoration: none;
+    color:#1a1a1a;
+    margin-top: .5rem;
+}
+.search-input{
+    display: none;
+}
+.carusel-container{ 
+    margin-top: 4.5rem;/*because the height of the fixed nav bar is 3.5 rem*/
+    width: 100vw;
+    height: 362px;
+    display: flex;
+    flex-direction: column;
+    /* position: relative; */
+}
+.slides-container{
+    width: 100%;
+    height:330px;
+    display: flex;
+    flex-direction: row;
+}
+.big-img-container{
+    width: 100vw;
+    height: 180px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slide{
+    width: 100%;
+    height: 100%;
+}
+.big-carusel-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* height:45% ; */
+    /* height: 11.25rem; */
+    /* background-image: url('/images/hero-image1.png'); */
+    background-size: cover;
+
+
+}
+.slide-info-container{
+    background: #1a1a1a;
+    width: 100%;
+    /* height: 55%; */
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    /* position: relative; */
+    /* position: absolute; */
+    /* top: 50px; */
+}
+.text-container{
+    width: 60%;
+
+    display: flex;
+    flex-direction: column;
+}
+.title, .episodes, .seasons{
+    color:white;
+}
+.title{
+    font-weight: 700;
+    margin-bottom: .5rem;
+    
+}
+.small-carusel-img-container{
+    width: 92px;
+    height: 133px;
+    overflow: hidden;
+
+    /* background-image: url('/images/small-image1.png'); */
+    /* background-size: cover; */
+    border: solid 1px white;
+}
+.small-carusel-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.dots-container{
+    background-color: #1a1a1a;
+    width: 100%;
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+.dot{
+    width: 8px;
+    height: 8px;
+    border: solid 1px  rgba(022,222,222,.5);
+    border-radius: 50%;
+    margin: 0 4px;
+}
+.dot.active{
+    background:green;
+}
+
+.shahid{
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+
+    
+}
+
+.shahid-btn{
+    background: #fff;
+    max-width: 10rem;
+    line-height: 28px;
+    padding: 0 20px 0 20px;
+    border-radius: 16px;
+    border: solid 1px transparent;
+    font-family: inherit;
+    font-weight:900;
+    color: #000;
+    text-decoration: none;
+    display: flex;
+    place-items: center;
+    
+}
+
+.pointers{
+    display: none;
+}
+.all-shows-container{
+    background: #f4f4f4;
+}
+.shahid-shows-container{
+    margin: .5rem 0;
+    padding: 1rem 0;
+    background: white;
+    display: flex;
+    flex-direction: column;
+
+}
+.section-title{
+    margin-right: 0.75rem;
+    font-family: inherit;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    color: #888888;
+}
+.poster-continer{
+    display: flex;
+    place-content: center;
+    /* overflow: hidden; */
+    /* width: ; */
+
+}
+
+.posters-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap:0.75rem;
+    row-gap: .2rem;
+    place-content: center;
+    margin: 0.5rem 0.75rem;
+
+    background: white;
+}
+.poster{
+    width: 100%;
+    border-radius: 3px;
+
+    /* background-size: cover; */
+    
+}
+.show-more{
+    width: 10rem;
+    padding: 0.3rem 1rem;
+    background-color: white;
+    font-family: inherit;
+    font-size: .8rem;
+    font-weight:bolder;
+    color: #888888;
+    border:1px solid #dddddd;
+    border-radius: 140px;
+    margin: auto
+    
+}
+
+
+/* ********************************************* */
+
+/*  WIDE SCREENS START HERE*/
+
+@media(min-width:768px){
+    .burger{
+        display:none;
+    }
+    nav{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+       padding-top: 1rem;
+    }
+    .mbc-logo-link{
+        position: absolute;
+        right: 3.5rem;
+    }
+        .menu{
+       
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }  
+    .menu-item{
+        display: block;
+        padding-top: 1rem;
+        padding-right: 1rem;
+        text-decoration: none;
+        font-family: inherit;
+        font-size: .8rem;
+        font-weight: 400;
+        color: #4f4f4f;
+    } 
+    .dash{
+        display: none;
+    }
+    .pointers{
+        color: orange;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        position: absolute;
+        padding: 0 5px;
+        top:50%;
+        transform: translateY(-50%);
+        /* visibility: hidden; */
+    }
+    #next-pointer{
+        color:red;
+    }
+}
+/* 
+
+
+
+
+*/
+
+
